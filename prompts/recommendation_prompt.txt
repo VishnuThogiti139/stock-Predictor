@@ -1,0 +1,5 @@
+Using the stock data for the last 30 days for {symbol}, analyze the trend and suggest whether the user should BUY, SELL, or HOLD this stock. 
+Justify your recommendation briefly.
+
+Data:
+{data}

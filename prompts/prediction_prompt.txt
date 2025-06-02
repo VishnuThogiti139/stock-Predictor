@@ -1,0 +1,4 @@
+Analyze the following recent 30-day stock data for {symbol} and predict its price for the next trading day. Only return the estimated price.
+
+Data:
+{data}

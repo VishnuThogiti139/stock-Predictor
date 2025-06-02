@@ -1,0 +1,2 @@
+Given the stock symbol {symbol} and company name {company_name}, list 3-5 public companies in the same industry that are its top peers in the stock market.
+Return only the company names and stock symbols.
