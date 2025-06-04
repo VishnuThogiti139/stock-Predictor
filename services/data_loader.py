@@ -11,12 +11,11 @@ def get_live_price(symbol):
 def get_stock_name(symbol):
     try:
         stock = yf.Ticker(symbol)
-        hist = stock.history(period="1d")
-        if hist.empty:
-            return f"❌ Invalid symbol: {symbol}"
-        return symbol  # Optional: fallback to company name from another source
+        info = stock.info
+        name = info.get("longName") or info.get("shortName")
+        return name if name else symbol
     except Exception:
-        return f"❌ Invalid symbol: {symbol}"
+        return symbol
 def is_valid_symbol(symbol):
     try:
         return not yf.Ticker(symbol).history(period="1d").empty
