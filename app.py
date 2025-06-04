@@ -14,16 +14,6 @@ from services.stock_info import (
 # Streamlit Page Config
 st.set_page_config("📊 AI Stock Market Insight", layout="wide", page_icon="📈")
 
-# Page Title
-st.markdown(
-    """
-    <style>
-    .stApp { background-color: #f4f6f9; }
-    .title { color: #1a73e8; font-size: 36px; font-weight: bold; }
-    </style>
-    """,
-    unsafe_allow_html=True,
-)
 st.markdown("<div class='title'>📊 AI-Powered Stock Market Insight Dashboard</div>", unsafe_allow_html=True)
 
 # Input section
