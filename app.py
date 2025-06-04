@@ -12,11 +12,9 @@ from services.stock_info import (
 )
 
 # Streamlit Page Config
-st.set_page_config("📊 AI Stock Market Insight", layout="wide", page_icon="📈")
+st.set_page_config("📊 AI-Powered Stock Insight", layout="wide", page_icon="📈")
+st.markdown("<h1 class='title'>📊 AI-Powered Stock Market Insight Dashboard</h1>", unsafe_allow_html=True)
 
-st.markdown("<div class='title'>📊 AI-Powered Stock Market Insight Dashboard</div>", unsafe_allow_html=True)
-
-# Input section
 symbol = st.text_input("Enter a Stock Symbol (e.g., AAPL, TSLA, MSFT)").upper()
 years = st.slider("Select historical data duration (in years)", min_value=1, max_value=10, value=5)
 
