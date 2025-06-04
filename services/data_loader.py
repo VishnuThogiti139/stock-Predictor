@@ -14,4 +14,9 @@ def get_stock_name(symbol):
         return info.get("longName", symbol)
     except Exception:
         return f"❌ Invalid symbol: {symbol}"
+def is_valid_symbol(symbol):
+    try:
+        return not yf.Ticker(symbol).history(period="1d").empty
+    except:
+        return False
     
