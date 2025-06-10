@@ -6,7 +6,7 @@ def get_peers(symbol, company_name):
 
 def get_price_prediction(symbol, recent_data):
     # Safely format recent data to avoid exceeding Gemini prompt limits
-    recent_data_str = recent_data.tail(30).to_string(index=False)
+    recent_data_str = recent_data.tail(60).to_string(index=False)
 
     if len(recent_data_str) > 3000:
         recent_data_str = recent_data.tail(10).to_string(index=False)
